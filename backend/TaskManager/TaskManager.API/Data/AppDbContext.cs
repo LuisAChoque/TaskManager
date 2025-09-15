@@ -32,5 +32,12 @@ public class AppDbContext : DbContext
             new Category { Id = 2, Name = "In Progress" },
             new Category { Id = 3, Name = "Done" }
         );
+    	modelBuilder.Entity<User>().HasData(
+		new User
+		{
+		    Id = 1,
+		    Username = "Admin",
+		    Password = "Admin" 
+		});
     }
 }
