@@ -1,66 +1,43 @@
-# Proyecto NOTESAPP
+# Proyecto TaskManager
 
-Este proyecto incluye un backend en .NET haciendo uso de Entity Framework como ORM y un frontend servido con `http-server`. También usa SQL Server en un contenedor de Docker.
+## 📖 Descripción
+**TaskManager** es una aplicación web para gestionar tareas.  
+Permite crear, listar, actualizar y eliminar tareas, asociándolas a usuarios y categorías (To Do, In Progress, Done).  
 
-## Requisitos
+Este proyecto está preparado para correr en Linux y se desarrolló demostrando el uso de un **backend en .NET** y un **frontend en React con TailwindCSS**.
 
-En el script adjunto se van a instalar las siguientes herramientas para el correcto funcionamiento del proyecto:
+---
 
-### 📌 **Docker**
-- **Versión:** Docker 20.10
-- Se instala automáticamente si no está presente.
-- Se utilizara para poder ejecutar SQL Server un container.
+## 🛠️ Tecnologías utilizadas
 
-### 📌 **SQL Server en Docker**
-- Imagen utilizada: `mcr.microsoft.com/mssql/server:2022-latest`
+### 🔹 Backend
+- .NET 8 / ASP.NET Core Web API
+- Entity Framework Core
+- SQL Server (montado en un contenedor docker)
+- Swagger (se pueden testear los distintos endpoints)
 
-### 📌 **.NET SDK**
-- **Versión:** .NET SDK 8.0
-- En Linux, se instala desde los repositorios de Microsoft.
-- En macOS, se instala usando `brew`.
+### 🔹 Frontend
+- React 18 + Vite
+- TailwindCSS 3
+- Axios (para consumir la API)
 
-### 📌 **Entity Framework CLI**
-- **Versión:** Última versión disponible
-- Se instala con:
-  ```sh
-  dotnet tool install --global dotnet-ef
-  ```
+---
 
-### 📌 **Node.js y npm**
-- **Versión:** Node.js 18.x y npm 8+
-- En Linux, se instala desde `nodesource`.
-- En macOS, se instala con `brew`.
+## ⚡ Requisitos previos
+Para ejecutar el proyecto necesitás tener instalado:
 
-### 📌 **http-server**
-- **Versión:** Última disponible
-- Se instala globalmente con:
-  ```sh
-  npm install -g http-server
-  ```
+- [Node.js 18+](https://nodejs.org/) (incluye `npm`)
+- [.NET 8 SDK](https://dotnet.microsoft.com/download)
 
-## Instalación y Ejecución
 
-1. **Clonar el repositorio:**
-   ```sh
-   URL: -Link a este repositorio-
-   ```
+---
 
-2. **Ejecutar el script de configuración:**
-   ```sh
-   chmod +x run.sh
-   ./run.sh
-   ```
+## ▶️ Ejecución del proyecto
 
-3. **Acceder a la aplicación:**
-   - **Backend:** [http://localhost:5000](http://localhost:5000)
-   - **Frontend:** [http://localhost:3000](http://localhost:3000)
+Gracias al script de configuración, solo tenés que clonar el repo y dos veces ejecutar el script run.sh:
 
-## Credenciales por defecto
-- **Username:** `Admin`
-- **Password:** `Admin`
-
-## Notas
-- Si `docker` no está en ejecución, el script intentará iniciarlo automáticamente.
-- Si `.NET SDK` o `npm` no están instalados, se instalarán de forma automática.
-- El proyecto fue testeado exitosamente en ubuntu 24.04 con el navegador Google Chrome
+```bash
+git clone https://github.com/tu-usuario/TaskManager.git
+cd TaskManager
+./run.sh
 

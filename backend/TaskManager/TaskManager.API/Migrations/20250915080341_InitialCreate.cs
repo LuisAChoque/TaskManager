@@ -77,6 +77,11 @@ namespace TaskManager.API.Migrations
                     { 3, "Done" }
                 });
 
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Password", "Username" },
+                values: new object[] { 1, "Admin", "Admin" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Tasks_CategoryId",
                 table: "Tasks",

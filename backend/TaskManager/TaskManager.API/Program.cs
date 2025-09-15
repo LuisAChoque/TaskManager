@@ -16,7 +16,7 @@ builder.Services.AddSession(options =>
 {
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
-    options.Cookie.SameSite = SameSiteMode.None;        // necesario para cookies cross-site
+    options.Cookie.SameSite = SameSiteMode.Strict;        
     options.Cookie.SecurePolicy = CookieSecurePolicy.None; 
 });
 

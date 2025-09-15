@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TaskManager.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250914154144_InitialCreate")]
+    [Migration("20250915080341_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -107,6 +107,14 @@ namespace TaskManager.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Password = "Admin",
+                            Username = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("Task", b =>
