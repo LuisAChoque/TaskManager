@@ -37,7 +37,7 @@ Para ejecutar el proyecto necesitás tener instalado:
 Gracias al script de configuración, solo tenés que clonar el repo y dos veces ejecutar el script run.sh:
 
 ```bash
-git clone https://github.com/tu-usuario/TaskManager.git
+git clone https://github.com/LuisAChoque/TaskManager.git
 cd TaskManager
 ./run.sh
 
